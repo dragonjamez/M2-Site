@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-   <p>hello</p>
 <head>
    <!--
       JavaScript 7th Edition
@@ -9,8 +8,8 @@
 
       Tinley Xeriscapes
       Plants web page
-      Author: 
-      Date:   
+      Author: jamey
+      Date: 1/20/2025 
 
       Filename: js01.html
    -->
@@ -44,16 +43,31 @@
         
       <aside>
          <ul>
-            <li id="blanket">Blanket Flower</li>
-            <li id="rugosa">Hedge Rose</li>
-            <li id="bluestem">Little Bluestem</li>
+            <li id="blanket" onclick="document.getElementById('plantImg').src = blanket;">Blanket Flower</li>
+            <li id="rugosa" onclick="document.getElementById('plantImg').src = rugosa;">Hedge Rose</li>
+            <li id="bluestem" onclick="document.getElementById('plantImg').src = bluestem;">Little Bluestem</li>
          </ul>
       </aside>
     
       <article>   
          <figure>
             <img src="#" alt="" title="" id="plantImg" />         
-            <figcaption id="imgCaption">            
+            <figcaption id="imgCaption">  
+               <script>
+                  /*
+                     Information on available plants
+                     including link to USDA website
+                  */
+                  document.write("<p>Plant choices for ");
+                  document.write("<a href='http://planthardiness.ars.usda.gov'>");
+                  document.write("hardiness zones</a>");
+                  document.write(" 5a - 6b </p>"); //hardness zones for chicago and surrounding area
+
+                  //define variables containing plant file names
+                  let blanket = "blanket.jpg";
+                  let bluestem = "bluestem.jpg";
+                  let rugosa = "rugosa.jpg";
+               </script>          
             </figcaption>
          </figure>       
       </article>
